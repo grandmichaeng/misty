@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retweet Button Example</title>
+    <style>
+        .retweet-button {
+            background-color: #1df288;
+            /* Twitter blue */
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .retweet-button:hover {
+            background-color: #6FC5C2;
+            /* Darker shade of Twitter blue */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="tweet-text">
+            🌟 TRENDING PARTY 🌟<br><br>
+            Mina's meet and greet in Malaysia for SK-II is just around the corner! Let's show our love and support by
+            trending these hashtags:<br><br>
+            Follow <a href="https://twitter.com/FanunionMina">@FanunionMina</a> <a
+                href="https://x.com/MinaMyouiBrasil">@MinaMyouiBrasil</a> for more updates and instructions. <br><br>
+            <a href="https://twitter.com/hashtag/MINA">#MINA</a> <a href="https://twitter.com/JYPETWICE">@JYPETWICE</a>
+            <a href="https://x.com/grand_minchaeng/status/1803622093176840480">June 20,2024</a>
+        </p>
+        <p>
+            &mdash; zeed (@grand_minchaeng)
+            <a href="#" class="retweet-button" onclick="retweetWithText()">Retweet</a>
+        </p>
+    </div>
+
+    <script>
+        function retweetWithText() {
+            var text = `🌟 TRENDING PARTY 🌟\n\nMina's meet and greet in Malaysia for SK-II is just around the corner! Let's show our love and support by trending these hashtags:\n\nFollow @FanunionMina @MinaMyouiBrasil for more updates and instructions.\n\n#MINA @JYPETWICE tinyurl.com/3cvy4cu5`;
+            var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text);
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+
+</html>
